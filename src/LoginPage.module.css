@@ -1,0 +1,59 @@
+/* LoginPage.module.css */
+
+/* Specific selectors for the login page */
+.LoginPage_center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /*height: 100vh;*/
+}
+
+.LoginPage_button {
+    margin-top: 20px;
+
+}
+
+/* Rest of the CSS styles for the login page */
+.LoginPage_h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+.LoginPage_form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.LoginPage_label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333333;
+}
+
+.LoginPage_input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: solid 1px;
+    border-radius: 4px;
+
+}
+
+.LoginPage_button[type="submit"] {
+    background-color: #4caf50;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 auto;
+    display: block;
+}
+
+.LoginPage_button[type="submit"]:hover {
+    background-color: #45a049;
+}

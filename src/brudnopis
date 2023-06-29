@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from "react
 import AddServiceForm from "./AddServiceFrom";
 import ServiceTable from "./ServiceTable";
 import LoginPage from "./LoginPage";
+// import "./navbar.css"; // Import the CSS file
 import Logout from "./Logout";
 import "./NewCss.css"
 
@@ -35,38 +36,32 @@ function App() {
                 <button className="openbtn" onClick={toggleSidebar}>☰</button>
                 <nav>
                     <ul>
-                        {login !== '' && (
-                            <li>
-                                <Link to="/services" className="button">Service list</Link>
-                            </li>
-                        )}
-                        <br />
-                        {login !== '' && (
-                            <li>
-                                <Link to="/add" className="button">Add service</Link>
-                            </li>
-                        )}
+                        <li>
+                            <Link to="/services" className="button">Service list</Link>
+                        </li>
+                        <br></br>
+                        <li>
+                            <Link to="/add" className="button">Add service</Link>
+                        </li>
                     </ul>
                 </nav>
             </div>
             <div className="content">
                 <div className="topbar">
+                    &nbsp;
                     <div className="leftbar">
                         {/*<div class="napis">GPserwis</div>*/}
                     </div>
-                    <div className="rightbar">
-                        {login === '' ? (
-                            <Link to="/" className="button login">Log in</Link>
-                        ) : (
-                            <>
-                                <div className="zalogowany">Logged as: {login}
+                    {/*<div className={"rightbar"}>*/}
+                    {/*    <div class="zalogowany">Logged as:<br></br> {login}</div>*/}
+                    {/*{login === '' ? (*/}
+                    {/*                    <Link to="/" className="button" class="login">Log in</Link>*/}
+                    {/*					*/}
 
-                                </div>
-                                <div><Link to="/logout" className="button login">Logout</Link></div>
-
-                            </>
-                        )}
-                    </div>
+                    {/*            ) : (*/}
+                    {/*                <Link to="/logout" className="button" class="login">Logout    </Link>*/}
+                    {/*            )}*/}
+                    {/*    </div>*/}
                 </div>
                 <div className="routes collapsed">
                     <Routes>

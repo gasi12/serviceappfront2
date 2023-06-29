@@ -1,0 +1,132 @@
+
+/*.center {*/
+/*  !*margin-left: auto;*!*/
+/*  !*margin-right: auto;*!*/
+/*  text-align: center;*/
+/*}*/
+
+/*.tabletext {*/
+/*  border: none;*/
+/*  width: 100%;*/
+/*  box-sizing: border-box;*/
+/*  resize: vertical;*/
+/*  height: 10em;*/
+/*}*/
+
+/*table, tr, td, th{*/
+/*  border:1px solid #CCCCCCFF;*/
+/*  padding: 5px;*/
+
+/*}*/
+/*.table {*/
+/*  table-layout: fixed;*/
+/*  word-wrap: break-word;*/
+/*  border-collapse: collapse;*/
+/*  width: 95%;*/
+/*  overflow:revert;*/
+/*}*/
+
+
+/*tr td:last-child {*/
+/*  width: 1%;*/
+/*  white-space: nowrap;*/
+/*}*/
+/*.idsize{*/
+/*  width: 5%;*/
+/*}*/
+/*.descsize{*/
+/*  width: 30%;*/
+/*}*/
+/*.statussize{*/
+/*  width: 10%;*/
+/*}*/
+/*.datesize{*/
+/*  width: 10%;*/
+/*}*/
+/*.buttonsize{*/
+/*  width:  15%;*/
+/*}*/
+/*.namesize{*/
+/*  width: 15%;*/
+/*}*/
+/*button{*/
+/*  width: 50%;*/
+/*}*/
+.ServiceTable_button {
+  width: 50%;
+}
+
+.ServiceTable {
+  text-align: center;
+  table-layout: fixed;
+  /*word-wrap: break-word;*/
+  border-collapse: collapse;
+  width: 95%;
+  /*overflow: revert;*/
+}
+
+/*.ServiceTable_wrapper {*/
+/*  !* Add wrapper styles *!*/
+/*}*/
+
+/*.ServiceTable_heading {*/
+/*  !* Add heading styles *!*/
+/*}*/
+
+.ServiceTable_idsize {
+  width: 5%;
+}
+
+.ServiceTable_descsize {
+  width: 30%;
+}
+
+.ServiceTable_statussize {
+  width: 10%;
+}
+
+.ServiceTable_datesize {
+  width: 10%;
+}
+
+.ServiceTable_buttonsize {
+  width: 15%;
+}
+
+.ServiceTable_namesize {
+  width: 15%;
+}
+
+.ServiceTable_button {
+  width: 50%;
+}
+
+.tabletext {
+text-align: center;
+  border: none;
+  width: 100%;
+  box-sizing: border-box;
+  resize: vertical;
+  /*height: 10em;*/
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.ServiceTable table,
+.ServiceTable tr,
+.ServiceTable td,
+.ServiceTable th {
+  border: 1px solid gray; /* change the border color to gray */
+  padding: 5px;
+}
+
+.ServiceTable_button {
+  width: 50%;
+}
+
+.ServiceTable_button {
+  width: 50%;
+}

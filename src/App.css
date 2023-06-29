@@ -1,38 +1,174 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
+/*li {*/
+/*	list-style: none;*/
+/*}*/
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/*!* Navbar styles *!*/
+/*.navbar {*/
+/*	float: left;*/
+/*	height: 100%;*/
+/*	width: 200px;*/
+/*	!*position: absolute;*!*/
+/*	left: 0;*/
+/*	background-color: #21241e;*/
+/*	!*overflow-x: hidden;*!*/
+/*	padding-top: 20px;*/
+/*}*/
+/*.content{*/
+/*	float: left;*/
+/*	display: flex;*/
+/*}*/
+
+/*.navbar .button,*/
+/*.navbar .link-button,*/
+/*.navbar .login {*/
+/*	margin-top: 20px;*/
+/*	display: block;*/
+/*	width: 100%;*/
+/*	font-family: 'Advent Pro', sans-serif;*/
+/*	background-color: #21241e;*/
+/*	!*padding: 5%;*!*/
+/*	text-decoration: none;*/
+/*	color: #f5f5f5;*/
+/*}*/
+
+/*.routes {*/
+/*	margin-left: 160px;*/
+/*	padding: 100px;*/
+/*	transition: margin-left 0.5s ease; !* Add transition property *!*/
+/*	width: 100vh;*/
+/*	height: 10px;*/
+/*}*/
+/*.routes.collapsed{*/
+/*	margin-left: 60px;*/
+/*	width: 100%;*/
+/*}*/
+
+/*!* Topbar styles *!*/
+/*.topbar {*/
+/*	background-color: #525864;*/
+/*	overflow: hidden;*/
+/*	padding: 0;*/
+/*	width: 100%;*/
+/*	!*display: flex;*!*/
+/*	flex:1;*/
+/*	align-items: center;*/
+/*	display:inline-block;*/
+/*	!*position: absolute;*!*/
+/*	!*margin-left: 200px;*!*/
+/*	height: 5%;*/
+
+
+/*}*/
+
+/*.leftbar {*/
+/*	padding: 10px;*/
+/*	font-weight: 700;*/
+/*	font-size: 150%;*/
+/*	color: #f5f5f5;*/
+/*	flex-grow: 1;*/
+/*}*/
+
+/*.napis {*/
+/*	background-color: #525864;*/
+/*	padding-left: 3px;*/
+/*	border-radius: 5px;*/
+/*}*/
+
+/*.rightbar {*/
+/*	border-radius: 5px;*/
+/*	background-color: #555;*/
+/*	padding: 10px;*/
+/*}*/
+
+/*.zalogowany {*/
+/*	font-family: 'Advent Pro', sans-serif;*/
+/*	color: #f5f5f5;*/
+/*	background-color: #343a41;*/
+/*	padding: 5px;*/
+/*	border-radius: 5px;*/
+/*}*/
+
+/*!* Button styles *!*/
+/*.button,*/
+/*.link-button,*/
+/*.login {*/
+/*	white-space: nowrap;*/
+/*	display: inline-block;*/
+/*	font-family: 'Advent Pro', sans-serif;*/
+/*	background-color: #21241e;*/
+/*	padding: 5%;*/
+/*	text-decoration: none;*/
+/*	color: #f5f5f5;*/
+/*	border-bottom-left-radius: 5px;*/
+/*	border-top-left-radius: 5px;*/
+/*}*/
+
+/*.button:hover,*/
+/*.link-button:hover,*/
+/*.login:hover {*/
+/*	background-color: #555;*/
+/*}*/
+
+/*!* List styles *!*/
+/*ul {*/
+/*	padding: 5px;*/
+/*	list-style-type: none;*/
+/*}*/
+
+/*!* Link button styles *!*/
+/*.link-button {*/
+/*	margin: 2px;*/
+/*	padding: 10px;*/
+/*	background-color: #555;*/
+/*	color: #f5f5f5;*/
+/*	border: none;*/
+/*	border-radius: 5px;*/
+/*	width: 60%;*/
+/*	text-decoration: none;*/
+/*	cursor: pointer;*/
+/*}*/
+
+/*.link-button:hover {*/
+/*	background-color: #333;*/
+/*}*/
+/*.navbar.collapsed {*/
+/*	width: 60px;*/
+/*}*/
+
+/*.navbar.collapsed .button,*/
+/*.navbar.collapsed .link-button,*/
+/*.navbar.collapsed .login {*/
+/*	display: none;*/
+/*}*/
+
+/*.navbar.collapsed .routes {*/
+/*	margin-left: 40px;*/
+/*	padding: 100px;*/
+/*}*/
+
+/*.navbar.collapsed .leftbar {*/
+/*	display: none;*/
+/*}*/
+
+/*.navbar.collapsed .rightbar {*/
+/*	display: none;*/
+/*}*/
+
+/*.navbar {*/
+/*	transition: width 0.5s ease; !* Add transition property *!*/
+/*}*/
+
+/*.openbtn {*/
+/*	color: white;*/
+/*	background-color: transparent;*/
+/*	border: none;*/
+/*	font-size: 24px;*/
+/*	display: flex;*/
+/*	justify-content: center;*/
+/*	align-items: center;*/
+/*	margin-left: 22%;*/
+/*}*/
