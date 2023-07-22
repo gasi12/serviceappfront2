@@ -1,11 +1,12 @@
 import React, {useEffect, useState} from "react";
 import style from './ServiceTable.module.css';
 import {fetchData, handleDelete, handleSave} from "./ApiCalls";
+import dayjs from "dayjs";
 const ServiceTable = function() {
 
     const [posts, setPosts] = useState([]);
     const [selectedPost, setSelectedPost] = useState(null);
-    const [username, setUsername] = useState('');
+    const [customerName, setCustomerName] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
     const [description, setDescription] = useState('');
     const [status, setStatus] = useState('PENDING');
@@ -13,7 +14,7 @@ const ServiceTable = function() {
 
 
     useEffect(() => {
-       loadData();
+       loadData().then();
     }, []);
  async function loadData(){
       fetchData()
@@ -24,8 +25,9 @@ const ServiceTable = function() {
  }
     const handleSaveClick = async () => {
         try {
-            await handleSave(username, phoneNumber, description, status, price, selectedPost);
+            await handleSave(customerName, phoneNumber, description, status, price, selectedPost);
             await loadData();
+            console.log(customerName);
         } catch (error) {
             console.error('There was a problem:', error);
             // Handle the error
@@ -57,7 +59,7 @@ const ServiceTable = function() {
     }
 
     function handlePostSelect(post) {
-        setUsername(post.userName)
+        setCustomerName(post.customerName)
         setPhoneNumber(post.phoneNumber)
         setDescription(post.description)
         setStatus(post.status)
@@ -96,12 +98,12 @@ const ServiceTable = function() {
                                 <td>
                                     <post className={style.ServiceTable_id}>{post.id}</post>
                                 </td>
-                                <td>{post.userName}</td>
+                                <td>{post.customerName}</td>
                                 <td>{post.phoneNumber}</td>
                                 <td>{post.description}</td>
                                 <td>{getDisplayStatus(post.status)}</td>
                                 <td>{post.price}</td>
-                                <td>{post.startDate}</td>
+                                <td>{dayjs(post.startDate).format("DD-MM-YYYY")}</td>
 
                                 <td>
                                     <button
@@ -125,8 +127,8 @@ const ServiceTable = function() {
                                         <input
                                             className={style.tabletext}
                                             type="text"
-                                            value={username}
-                                            onChange={(e) => setUsername(e.target.value)}
+                                            value={customerName}
+                                            onChange={(e) => setCustomerName(e.target.value)}
                                         />
                                     </td>
                                     <td>

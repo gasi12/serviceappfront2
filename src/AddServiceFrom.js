@@ -11,7 +11,7 @@ const AddServiceForm = function() {
     }
 
     const [formValues, setFormValues] = useState({
-        userName: "",
+        customerName: "",
         phoneNumber: "",
         description: "",
         price: ""
@@ -21,7 +21,7 @@ const AddServiceForm = function() {
         event.preventDefault();
 
         const data = {
-            userName: formValues.name,
+            customerName: formValues.name,
             phoneNumber: formValues.phoneNumber,
             serviceRequestList: [
                 {
@@ -31,12 +31,12 @@ const AddServiceForm = function() {
             ]
         };
         const token =
-            "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkZWZhdWx0QGFkbWluIiwiaWF0IjoxNjg3MTI0OTkzLCJleHAiOjE2ODcxMjU3MTN9.s6gfq0ZnnIXkj5_nv9BvefxGYGqcsD17uCVOG-5ADBU"; //
+            "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkZWZhdWx0QGFkbWluIiwiaWF0IjoxNjg5MDk5MjQwLCJleHAiOjE2ODkxMDUyNDB9.NFwZeQboD9HyfTAbXbZwJTDm6ohwrA0qKaN30wEzAXI"; //
         axios
             .post("http://localhost:8080/savecustomerdumb", JSON.stringify(data), {
               headers: {
-                   "Content-Type": "application/json"
-                    // 'Authorization': `Bearer ${token}`
+                   "Content-Type": "application/json",
+                     'Authorization': `Bearer ${token}`
                 }
             })
             .then((response) => {

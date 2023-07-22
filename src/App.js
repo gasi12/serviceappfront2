@@ -5,6 +5,7 @@ import ServiceTable from "./ServiceTable";
 import LoginPage from "./LoginPage";
 import Logout from "./Logout";
 import "./NewCss.css"
+import Chat from "./Chat";
 
 function App() {
     const [login, setLogin] = useState(localStorage.getItem('loginValue'));
@@ -74,6 +75,7 @@ function App() {
                         <Route path="/logout" element={<Logout handleLoginValue={handleLoginValue} />} />
                         <Route path="/services" element={<ServiceTable />} />
                         <Route path="/add" element={<AddServiceForm />} />
+                        <Route path="/chat" element={<Chat/>} />
                     </Routes>
                 </div>
             </div>

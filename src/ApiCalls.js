@@ -3,7 +3,7 @@ export const fetchData = async () => {
         const token =
             "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkZWZhdWx0QGFkbWluIiwiaWF0IjoxNjg3MTI0ODEzLCJleHAiOjE2ODcxMjU1MzN9.6ahbqRdlGqNYiqj2E9zZXZlMPgcP0pQDDBXSzJ1Pr6Q"; // Replace 'your_jwt_token' with your actual JWT token
         const response = await fetch(
-            "http://localhost:8080/services/service-requests-with-user-name",
+            "http://localhost:8080/services/service-requests-with-user-name?pageNo=0&pageSize=10",
             {
              //headers: {
                 //    Authorization: `Bearer ${token}`
@@ -34,7 +34,7 @@ export async function handleDelete(id) {
         }
     }
 }
-export  const handleSave = async (username, phoneNumber, description, status, price, selectedPost) => {
+export  const handleSave = async (customerName, phoneNumber, description, status, price, selectedPost) => {
     // setStatus("PENDING"); // ????
     try {
         const response = await fetch(`http://localhost:8080/services/service/${selectedPost.id}/user`, {
@@ -43,7 +43,7 @@ export  const handleSave = async (username, phoneNumber, description, status, pr
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                userName: username,
+                userName: customerName,
                 phoneNumber: phoneNumber,
                 description: description,
                 status: status,
