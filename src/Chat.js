@@ -1,14 +1,14 @@
 import { StompSessionProvider, useSubscription, useStompClient } from 'react-stomp-hooks';
 import { useState, useEffect } from 'react';
 import {StompHeaders} from "@stomp/stompjs";
-const token = "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkZWZhdWx0QGFkbWluIiwiaWF0IjoxNjg5MDMzMTg4LCJleHAiOjE2ODkwMzkxODh9.IUV_0REAhhsFVkTS6uGhgK80LU-KZgWjW26Cpmznwow";
+
+const token = "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyVHlwZSI6InVzZXIiLCJzdWIiOiJkZWZhdWx0QGFkbWluIiwiaWF0IjoxNjkyMDk1Mjc5LCJleHAiOjE2OTIxMDEyNzl9.QjenukxtpbMgzJPLdPAVxceNHzQz78vknNLqVZFbNo0";
 
 const ChatComponent = () => {
 
     const [messages, setMessages] = useState([]);
     const [typedMessage, setTypedMessage] = useState("");
 
-    // Adjust the onMessage function to parse the body to a JSON object
     const onMessage = (message) => {
         let parsedMessage = JSON.parse(message.body);
         console.log(parsedMessage); // Log the server response
@@ -17,18 +17,19 @@ const ChatComponent = () => {
 
     useSubscription("/topic/greetings/1", onMessage);
 
-
     const stompClient = useStompClient();
 
     const sendMessage = () => {
-
         stompClient.publish({
             destination: "/app/hello/1",
             headers: {
-               'Authorization': 'Bearer ' + token // Assume 'token' variable contains your actual token
+                'Authorization': 'Bearer ' + token // Assume 'token' variable contains your actual token
             },
             body: JSON.stringify({
-                name: typedMessage
+                content: typedMessage,
+                author: 'username', // replace 'username' with the actual username
+                serviceId: 1, // replace 1 with the actual serviceId
+                timestamp: new Date().toISOString() // current date and time
             })
         });
         setTypedMessage("");
@@ -38,7 +39,7 @@ const ChatComponent = () => {
         <div>
             <ul>
                 {messages.map((msg, index) =>
-                    <li key={index}> {msg.content} </li>
+                    <li key={index}>Author: {msg.author}, Message: {msg.content} </li>
                 )}
             </ul>
             <input type="text" onChange={(e) => setTypedMessage(e.target.value)} value={typedMessage} />
@@ -51,12 +52,7 @@ const Chat = () => {
     const [ticket, setTicket] = useState(null);
 
     useEffect(() => {
-        // fetch('http://localhost:8080/generateTicket')
-        //     .then(response => response.text())
-        //     .then((ticket) => {
-        //         setTicket(ticket);
-        //     });
-        setTicket("3bdb92cb-e5f5-4848-811c-2cd56bb47ca6")
+        setTicket("1e437e3d-0b99-4198-afd3-3d65a51fda30")
     }, []);
 
     if (ticket==null) {
